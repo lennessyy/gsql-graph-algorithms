@@ -8,7 +8,7 @@ CREATE QUERY GSQL_jaccard_similarity_batch (
   INT num_of_batches = 10,
   BOOL print_accum = true,
   INT print_limit = 50,
-  STRING file_path = "") FOR GRAPH MyGraph {
+  STRING file_path = "") {
   /*
     Calculates the Jaccard Similarity between all vertices using a common feature vertex type.
       Jaccard Similarity = intersection_size / (setSize_all + setSize_self - intersection_size)
