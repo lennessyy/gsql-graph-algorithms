@@ -114,3 +114,11 @@
 > [`c511113`](https://github.com/tigergraph/gsql-graph-algorithms/commit/c511113ac0052fde8c12ce70d7da95155ef1bfbd) revise install_free
 
 > [`7d895bb`](https://github.com/tigergraph/gsql-graph-algorithms/commit/7d895bb84bdff3c348f5cc14ed00e7f1167097db) add 2 shortest path queries
+
+## v3.2.1 Shortest Path Change Logs - September 29, 2021
+
+### `tg_shortest_ss_any_wt`
+
+### `tg_shortest_ss_no_wt`
+
+### `tg_shortest_ss_pos_wt`

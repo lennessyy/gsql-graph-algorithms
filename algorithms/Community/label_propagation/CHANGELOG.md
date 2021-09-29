@@ -24,3 +24,7 @@
 > [`9c78d4e`](https://github.com/tigergraph/gsql-graph-algorithms/commit/9c78d4ebb9ede34f286a8887f230d57f6a30568f) fixed format issues, regenerated .gsql files, updated README
 
 > [`5373c48`](https://github.com/tigergraph/gsql-graph-algorithms/commit/5373c482fc2bda5c0d5582e6349559aba18c36be) Add graph algorithms
+
+## v3.2.1 Label Propagation Change Logs - September 29, 2021
+
+### `tg_label_prop`

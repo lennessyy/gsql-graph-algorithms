@@ -54,3 +54,9 @@
 > [`946b08a`](https://github.com/tigergraph/gsql-graph-algorithms/commit/946b08aa814eb225f4030d05e958438e36751574) change VSET logic, delete path choice, fix indentation
 
 > [`5373c48`](https://github.com/tigergraph/gsql-graph-algorithms/commit/5373c482fc2bda5c0d5582e6349559aba18c36be) Add graph algorithms
+
+## v3.2.1 Triangle Counting Change Logs - September 29, 2021
+
+### `tg_tri_count_fast`
+
+### `tg_tri_count`

@@ -40,3 +40,7 @@
 > [`0f5a3f5`](https://github.com/tigergraph/gsql-graph-algorithms/commit/0f5a3f540328e5f916a056df37cf8bdadd7b522e) Add files via upload
 
 > [`d77347c`](https://github.com/tigergraph/gsql-graph-algorithms/commit/d77347ce382dbb66264b7c0c0a96671390f492bc) Add lcc, cc and cc_aprox
+
+## v3.2.1 Harmonic Change Logs - September 29, 2021
+
+### `tg_harmonic_cent`

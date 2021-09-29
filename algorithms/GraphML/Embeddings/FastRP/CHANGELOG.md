@@ -68,3 +68,15 @@
 > [`ac4a84a`](https://github.com/tigergraph/gsql-graph-algorithms/commit/ac4a84a1bdac3806ff481e3f833f20317458edb2) Added gsql query for fastRP_map version
 
 > [`6df6b3f`](https://github.com/tigergraph/gsql-graph-algorithms/commit/6df6b3f89ae294f9e9c6a2739508063e0e49db50) Added gsql query for fastRP_map version
+
+## v3.2.1 Fastrp Change Logs - September 29, 2021
+
+### `tg_fastRP_query`
+
+### `tg_fastRP_map`
+
+### `tg_fastRP_map_query`
+
+### `tg_fastRP`
+
+### `tg_fastRP_preprocessing`

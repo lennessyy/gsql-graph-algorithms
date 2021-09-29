@@ -60,3 +60,9 @@
 > [`c83ca33`](https://github.com/tigergraph/gsql-graph-algorithms/commit/c83ca3316ad458084b7d0297b80a55f57b3498b6) Rename SCC_SmallWorld (1).gsql to SCC_SmallWorld.gsql
 
 > [`2dd6aa9`](https://github.com/tigergraph/gsql-graph-algorithms/commit/2dd6aa9c1c02ae79c4e84d6c65825138431afc8a) Add files via upload
+
+## v3.2.1 Strongly Connected Components Change Logs - September 29, 2021
+
+### `tg_scc`
+
+### `tg_scc_small_world`

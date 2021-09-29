@@ -54,3 +54,13 @@
 > [`a921a77`](https://github.com/tigergraph/gsql-graph-algorithms/commit/a921a7756247fa0e55d807a0245ecf102401ab45) Merge branch 'tigergraph:algorithm-folder-restructure' into algorithm-folder-restructure
 
 > [`ac43583`](https://github.com/tigergraph/gsql-graph-algorithms/commit/ac435831c1e0f8a254f52dfa1390d2e3b48f161f) moved examples to template and updated query names
+
+## v3.2.1 Node2Vec Change Logs - September 29, 2021
+
+### `tg_random_walk`
+
+### `tg_random_walk_batch`
+
+### `tg_node2vec`
+
+### `tg_node2vec_sub`

@@ -26,3 +26,7 @@
 > [`de29bc0`](https://github.com/tigergraph/gsql-graph-algorithms/commit/de29bc01c907104ede081c98579a3245b6808375) added capability to write edgeset to a file
 
 > [`d237638`](https://github.com/tigergraph/gsql-graph-algorithms/commit/d23763851ca98ed4347d77fc4f2b85d488c57651) added greedy graph coloring algorithm
+
+## v3.2.1 Greedy Graph Coloring Change Logs - September 29, 2021
+
+### `tg_greedy_graph_coloring`

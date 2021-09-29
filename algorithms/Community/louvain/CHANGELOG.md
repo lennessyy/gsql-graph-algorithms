@@ -30,3 +30,11 @@
 > [`a816887`](https://github.com/tigergraph/gsql-graph-algorithms/commit/a816887d55b4f2ddf8829fba0cd5c4fbc96491c5) fix pageRank, more standardized elsewhere
 
 > [`ee2b9d4`](https://github.com/tigergraph/gsql-graph-algorithms/commit/ee2b9d4523dbe52068e37c8d0f3a863666709f7e) move louvain_parallel to schema-first
+
+## v3.2.1 Louvain Change Logs - September 29, 2021
+
+### `tg_louvain_ExprFunctions`
+
+### `tg_louvain_parallel`
+
+### `tg_louvain_distributed`

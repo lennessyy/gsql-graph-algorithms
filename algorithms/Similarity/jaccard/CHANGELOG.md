@@ -58,3 +58,17 @@
 > [`93685aa`](https://github.com/tigergraph/gsql-graph-algorithms/commit/93685aad73cc1bb3db16f8c89ca9d62e50e9a718) Merge pull request #22 from Ramko9999/master
 
 > [`1da86dc`](https://github.com/tigergraph/gsql-graph-algorithms/commit/1da86dc6c1c1751f58241c2ae8e056169867ac31) Schema Less Queries
+
+## v3.2.1 Jaccard Change Logs - September 29, 2021
+
+### `tg_jaccard_batch`
+
+### `tg_jaccard_nbor_ap_sub`
+
+### `tg_jaccard_nbor_ap`
+
+### `tg_jaccard_similarity`
+
+> [`8111e3e`](https://github.com/tigergraph/gsql-graph-algorithms/commit/8111e3ec8ed946ef9f23a3d62efda53ea1b48e4d) Merge branch 'tigergraph:master' into master
+
+### `tg_jaccard_nbor_ss`

@@ -16,3 +16,7 @@
 > [`feead52`](https://github.com/tigergraph/gsql-graph-algorithms/commit/feead5266fc42d1e96983b8bd70268d9c67b7b6b) Kcore Max Implementation Change
 
 > [`1da86dc`](https://github.com/tigergraph/gsql-graph-algorithms/commit/1da86dc6c1c1751f58241c2ae8e056169867ac31) Schema Less Queries
+
+## v3.2.1 K Core Change Logs - September 29, 2021
+
+### `tg_kcore`

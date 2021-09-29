@@ -40,3 +40,9 @@
 > [`affce64`](https://github.com/tigergraph/gsql-graph-algorithms/commit/affce64eb69bc2c772ba641b857e75d2bf7369b7) Rename WCC_SmallWorld (1).gsql to WCC_SmallWorld.gsql
 
 > [`2dd6aa9`](https://github.com/tigergraph/gsql-graph-algorithms/commit/2dd6aa9c1c02ae79c4e84d6c65825138431afc8a) Add files via upload
+
+## v3.2.1 Weakly Connected Components Change Logs - September 29, 2021
+
+### `tg_wcc`
+
+### `tg_wcc_small_world`

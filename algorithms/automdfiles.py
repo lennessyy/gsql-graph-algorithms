@@ -5,7 +5,7 @@ import time
 import datetime
 
 
-TIGERGRAPH_DOCUMENTATION_LINK = 'https://docs.tigergraph.com/tigergraph-platform-overview/graph-algorithm-library#'
+TIGERGRAPH_DOCUMENTATION_LINK = 'https://docs.tigergraph.com/graph-algorithm-library/'
 TIGERGRAPH_DISCORD_LINK = 'https://discord.gg/vFbmPyvJJN'
 TIGERGRAPH_COMMUNITY_LINK = 'https://community.tigergraph.com'
 
@@ -16,44 +16,44 @@ TIGERGRAPH_GSQL_REPO_LINK = 'https://github.com/tigergraph/gsql-graph-algorithms
 TIGERGRAPH_COMMITS_LINK = 'https://github.com/tigergraph/gsql-graph-algorithms/commit/'
 
 # CHANGE TO DESIRED VERSION
-TIGERGRAPH_CURRENT_GSQL_VERSION = 'v3.2.0'  
+TIGERGRAPH_CURRENT_GSQL_VERSION = 'v3.2.1'  
 
-# CHANGE THIS TO LAST PUSH DATE
-TIGERGRAPH_CURRENT_LAST_PUSH_DATE = 'v3.2.0'  
-
-TIGERGRAPH_CURRENT_VERSION_DATE = datetime.date.now().isoformat()
 TIGERGRAPH_CURRENT_VERSION_DATE_READABLE = datetime.date.today().strftime("%B %d, %Y")
-
+centrality = 'centrality'
+similarity = 'similarity'
+community = 'community'
+path = 'path'
+node = 'node-embeddings'
+classification = 'classification'
 
 Documentation = {
-    'betweenness': 'betweenness-centrality',
-    'closeness': 'closeness-centrality',
-    'weakly_connected_components': 'connected-components',
-    'strongly_connected_components': 'connected-components',
-    'cosine': 'cosine-similarity-of-neighborhoods-batch',
-    'cycle_detection': 'cycle-detection',
-    'estimated_diameter': 'estimated-diameter',
-    'greedy_graph_coloring': 'greedy-graph-coloring',
-    'jaccard': 'jaccard-similarity-of-neighborhoods-batch',
-    'k_core': 'k-core-decomposition',
+    'betweenness': f'{centrality}/betweenness-centrality',
+    'closeness': f'{centrality}/closeness-centrality',
+    'weakly_connected_components': f'{community}/connected-components',
+    'strongly_connected_components': f'{community}/connected-components',
+    'cosine': f'{similarity}/cosine-similarity-of-neighborhoods-batch',
+    'cycle_detection': f'{path}/cycle-detection',
+    'estimated_diameter': f'{path}/estimated-diameter',
+    'greedy_graph_coloring': f'{classification}greedy-graph-coloring',
+    'jaccard': f'{similarity}/jaccard-similarity-of-neighborhoods-batch',
+    'k_core': f'{community}/k-core-decomposition',
     'k_means': 'https://raw.githubusercontent.com/tigergraph/gsql-graph-algorithms/master/algorithms/schema-free/kmeans.gsql',
-    'k_nearest_neighbors': 'k-nearest-neighbors-cosine-neighbor-similarity-all-vertices-batch',
-    'label_propagation': 'label-propagation',
-    'local_clustering_coefficient': 'local-clustering-coefficient',
-    'louvain_distributed': 'louvain-method-with-parallelism-and-refinement',
-    'louvain': 'louvain-method-with-parallelism-and-refinement',
-    'maximal_independent_set': 'maximal-independent-set',
-    'minimum_spanning_forest': 'minimum-spanning-forest-msf',
-    'minimum_spanning_tree': 'minimum-spanning-tree-mst',
-    'pagerank': 'pagerank',
-    'strongly_connected_components': 'strongly-connected-components-1',
-    'shortest_path': 'single-source-shortest-path-weighted',
-    'triangle_counting': 'triangle-counting',
-    'Node2Vec': 'node-2-vec',
+    'k_nearest_neighbors': f'{classification}/k-nearest-neighbors-cosine-neighbor-similarity-all-vertices-batch',
+    'label_propagation': f'{community}/label-propagation',
+    'local_clustering_coefficient': f'{community}/local-clustering-coefficient',
+    'louvain_distributed': f'{community}/louvain-method-with-parallelism-and-refinement',
+    'louvain': f'{community}/louvain-method-with-parallelism-and-refinement',
+    'maximal_independent_set': f'{path}/maximal-independent-set',
+    'minimum_spanning_forest': f'{path}/minimum-spanning-forest-msf',
+    'minimum_spanning_tree': f'{path}/minimum-spanning-tree-mst',
+    'pagerank': f'{centrality}/pagerank',
+    'strongly_connected_components': f'{community}/strongly-connected-components-1',
+    'shortest_path': f'{path}/single-source-shortest-path-weighted',
+    'triangle_counting': f'{community}/triangle-counting',
+    'Node2Vec': f'{node}/node-2-vec',
+    'harmonic': f'{centrality}/harmonic-centrality',
     'FastRP': 'N/A',
-    'harmonic': 'N/A',
     }
-
 
 
 # find last directory
@@ -86,15 +86,17 @@ def fetch_change_log(algo_lib_dir, title):
     # CHANGE THIS
     gsql_git = git.Git('~/Documents/GitHub/gsql-graph-algorithms')
     for file in os.listdir(algo_lib_dir):
-        if '.gsql' in file or '.cpp' in file:
+        if '.gsql' in file or '.cpp' in file or '.hpp' in file:
             gsql_path = os.path.join(algo_lib_dir, file)
-            gsql_algo_name = file.replace('.gsql','').replace('.cpp','')
+            gsql_algo_name = file.replace('.gsql','').replace('.cpp','').replace('.hpp','')
             
             change_log += f'\n### `{gsql_algo_name}`\n'
-            gsql_logs = list(gsql_git.log('-m','--follow', '--pretty=format:%H!!%h!!%an!!%as!!%s', f'{gsql_path}').splitlines())
-            gsql_logs += list(gsql_git.log('--full-history','--follow', '--pretty=format:%H!!%h!!%an!!%as!!%s', f'{gsql_path}').splitlines())
+            gsql_logs = list(gsql_git.log('-m','--follow', '--date=iso', '--pretty=format:%H!!%h!!%an!!%as!!%s', f'--since="{get_last_merge_date_iso()}"', f'{gsql_path}').splitlines())
+            gsql_logs += list(gsql_git.log('--full-history','--follow','--date=iso', '--pretty=format:%H!!%h!!%an!!%as!!%s', f'--since="{get_last_merge_date_iso()}"', f'{gsql_path}').splitlines())
             gsql_logs = set(gsql_logs)
 
+            if not gsql_logs:
+                continue
             for log in gsql_logs:
                 hashid_long, hashid_short, author, date, message = log.split('!!')
                 commit_link = TIGERGRAPH_COMMITS_LINK + hashid_long
@@ -102,16 +104,23 @@ def fetch_change_log(algo_lib_dir, title):
         
     return change_log
 
+def get_last_merge_date_iso():
+    gsql_git = git.Git('~/Documents/GitHub/gsql-graph-algorithms')
+    last_merge = list(gsql_git.log('--merges', '--pretty=format:%aI').splitlines())[0]
+    return last_merge
 
 
-def write_readme_files(paths):
+
+def write_md_files(paths):
     for dir in paths:
         specific_readme = ['algorithms/GraphML/Embeddings/Node2Vec', 'algorithms/GraphML/Embeddings/FastRP']
         title = dir.split('/')[-1]
         changelog_link = dir + '/CHANGELOG.md'
         doc_title = title.replace('_',' ').title()
-        link = TIGERGRAPH_DOCUMENTATION_LINK + Documentation[title]
-        with open(os.path.join(dir, 'CHANGELOG.md'), 'w') as handler:
+        link = TIGERGRAPH_DOCUMENTATION_LINK + Documentation[title] if title in Documentation.keys() else TIGERGRAPH_DOCUMENTATION_LINK
+        with open(os.path.join(dir, 'CHANGELOG.md'), 'a+') as handler:
+            handler.read()
+            handler.seek(0,0)
             handler.write(fetch_change_log(dir,doc_title))
         if dir not in specific_readme:
             with open(os.path.join(dir, 'README.md'), 'w') as handler:
@@ -141,4 +150,4 @@ def write_readme_files(paths):
 if __name__ == "__main__":
     set_dirs = set()
     recursvie_dir('algorithms', set_dirs)
-    write_readme_files(set_dirs)
+    write_md_files(set_dirs)

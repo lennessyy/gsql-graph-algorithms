@@ -20,3 +20,7 @@
 > [`93685aa`](https://github.com/tigergraph/gsql-graph-algorithms/commit/93685aad73cc1bb3db16f8c89ca9d62e50e9a718) Merge pull request #22 from Ramko9999/master
 
 > [`1da86dc`](https://github.com/tigergraph/gsql-graph-algorithms/commit/1da86dc6c1c1751f58241c2ae8e056169867ac31) Schema Less Queries
+
+## v3.2.1 Minimum Spanning Tree Change Logs - September 29, 2021
+
+### `tg_mst`

@@ -28,3 +28,9 @@
 > [`6606a3a`](https://github.com/tigergraph/gsql-graph-algorithms/commit/6606a3ad171de44e2d12c1a42131f6ec1b811a36) jaccard/cosine update, kmeans in progress
 
 > [`5c761ec`](https://github.com/tigergraph/gsql-graph-algorithms/commit/5c761eca0361c8ad228bc786fcd875843691dec1) kmeans/jaccard/cosine/closenss_cent_approx
+
+## v3.2.1 K Means Change Logs - September 29, 2021
+
+### `tg_kmeans_sub`
+
+### `tg_kmeans`

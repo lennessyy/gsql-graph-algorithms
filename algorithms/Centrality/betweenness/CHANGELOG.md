@@ -34,3 +34,7 @@
 > [`7100d9f`](https://github.com/tigergraph/gsql-graph-algorithms/commit/7100d9fb7ccf1810c5b9620d03a50251f5b725c0) Delete MSbetweenness_cent.gsql
 
 > [`0f5a3f5`](https://github.com/tigergraph/gsql-graph-algorithms/commit/0f5a3f540328e5f916a056df37cf8bdadd7b522e) Add files via upload
+
+## v3.2.1 Betweenness Change Logs - September 29, 2021
+
+### `tg_betweenness_cent`

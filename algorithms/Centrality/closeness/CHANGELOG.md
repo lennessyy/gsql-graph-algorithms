@@ -64,3 +64,9 @@
 > [`0808f29`](https://github.com/tigergraph/gsql-graph-algorithms/commit/0808f29d30a1a0a7137654d51d8680ed861b64c0) Delete MScloseness_cent_approx.gsql
 
 > [`58a70b2`](https://github.com/tigergraph/gsql-graph-algorithms/commit/58a70b2dc81e307509e748eca4a484366b0a33a3) Add files via upload
+
+## v3.2.1 Closeness Change Logs - September 29, 2021
+
+### `tg_closeness_cent_approx`
+
+### `tg_closeness_cent`

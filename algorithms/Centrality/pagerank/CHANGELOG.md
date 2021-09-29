@@ -72,3 +72,11 @@
 > [`bb48267`](https://github.com/tigergraph/gsql-graph-algorithms/commit/bb482679984d4af6c6a9230ee7f4b5eeecc7d360) Fixed writing to file problems
 
 > [`1da86dc`](https://github.com/tigergraph/gsql-graph-algorithms/commit/1da86dc6c1c1751f58241c2ae8e056169867ac31) Schema Less Queries
+
+## v3.2.1 Pagerank Change Logs - September 29, 2021
+
+### `tg_pagerank_wt`
+
+### `tg_pagerank`
+
+### `tg_pagerank_pers`
